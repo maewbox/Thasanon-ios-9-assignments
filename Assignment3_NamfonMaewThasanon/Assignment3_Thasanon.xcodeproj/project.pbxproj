@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC32E14A1D3D38D8002D4163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E1491D3D38D8002D4163 /* AppDelegate.swift */; };
+		AC32E14C1D3D38D8002D4163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E14B1D3D38D8002D4163 /* ViewController.swift */; };
+		AC32E14F1D3D38D8002D4163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC32E14D1D3D38D8002D4163 /* Main.storyboard */; };
+		AC32E1511D3D38D8002D4163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32E1501D3D38D8002D4163 /* Assets.xcassets */; };
+		AC32E1541D3D38D8002D4163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC32E1521D3D38D8002D4163 /* LaunchScreen.storyboard */; };
+		AC32E15F1D3D38D8002D4163 /* Assignment3_ThasanonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E15E1D3D38D8002D4163 /* Assignment3_ThasanonTests.swift */; };
+		AC32E16A1D3D38D8002D4163 /* Assignment3_ThasanonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E1691D3D38D8002D4163 /* Assignment3_ThasanonUITests.swift */; };
+		AC32E1781D3D3A94002D4163 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E1771D3D3A94002D4163 /* Recipes.swift */; };
+		AC32E17A1D3D3D0E002D4163 /* MainListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E1791D3D3D0E002D4163 /* MainListTableTableViewController.swift */; };
+		AC32E17C1D3D40BB002D4163 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E17B1D3D40BB002D4163 /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC32E15B1D3D38D8002D4163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC32E13E1D3D38D8002D4163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC32E1451D3D38D8002D4163;
+			remoteInfo = Assignment3_Thasanon;
+		};
+		AC32E1661D3D38D8002D4163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC32E13E1D3D38D8002D4163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC32E1451D3D38D8002D4163;
+			remoteInfo = Assignment3_Thasanon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC32E1461D3D38D8002D4163 /* Assignment3_Thasanon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment3_Thasanon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC32E1491D3D38D8002D4163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC32E14B1D3D38D8002D4163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC32E14E1D3D38D8002D4163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC32E1501D3D38D8002D4163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC32E1531D3D38D8002D4163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC32E1551D3D38D8002D4163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC32E15A1D3D38D8002D4163 /* Assignment3_ThasanonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3_ThasanonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC32E15E1D3D38D8002D4163 /* Assignment3_ThasanonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment3_ThasanonTests.swift; sourceTree = "<group>"; };
+		AC32E1601D3D38D8002D4163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC32E1651D3D38D8002D4163 /* Assignment3_ThasanonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3_ThasanonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC32E1691D3D38D8002D4163 /* Assignment3_ThasanonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment3_ThasanonUITests.swift; sourceTree = "<group>"; };
+		AC32E16B1D3D38D8002D4163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC32E1771D3D3A94002D4163 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		AC32E1791D3D3D0E002D4163 /* MainListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListTableTableViewController.swift; sourceTree = "<group>"; };
+		AC32E17B1D3D40BB002D4163 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC32E1431D3D38D8002D4163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1571D3D38D8002D4163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1621D3D38D8002D4163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC32E13D1D3D38D8002D4163 = {
+			isa = PBXGroup;
+			children = (
+				AC32E1481D3D38D8002D4163 /* Assignment3_Thasanon */,
+				AC32E15D1D3D38D8002D4163 /* Assignment3_ThasanonTests */,
+				AC32E1681D3D38D8002D4163 /* Assignment3_ThasanonUITests */,
+				AC32E1471D3D38D8002D4163 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC32E1471D3D38D8002D4163 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC32E1461D3D38D8002D4163 /* Assignment3_Thasanon.app */,
+				AC32E15A1D3D38D8002D4163 /* Assignment3_ThasanonTests.xctest */,
+				AC32E1651D3D38D8002D4163 /* Assignment3_ThasanonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC32E1481D3D38D8002D4163 /* Assignment3_Thasanon */ = {
+			isa = PBXGroup;
+			children = (
+				AC32E1491D3D38D8002D4163 /* AppDelegate.swift */,
+				AC32E14B1D3D38D8002D4163 /* ViewController.swift */,
+				AC32E14D1D3D38D8002D4163 /* Main.storyboard */,
+				AC32E1501D3D38D8002D4163 /* Assets.xcassets */,
+				AC32E1521D3D38D8002D4163 /* LaunchScreen.storyboard */,
+				AC32E1551D3D38D8002D4163 /* Info.plist */,
+				AC32E1771D3D3A94002D4163 /* Recipes.swift */,
+				AC32E1791D3D3D0E002D4163 /* MainListTableTableViewController.swift */,
+				AC32E17B1D3D40BB002D4163 /* DetailViewController.swift */,
+			);
+			path = Assignment3_Thasanon;
+			sourceTree = "<group>";
+		};
+		AC32E15D1D3D38D8002D4163 /* Assignment3_ThasanonTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC32E15E1D3D38D8002D4163 /* Assignment3_ThasanonTests.swift */,
+				AC32E1601D3D38D8002D4163 /* Info.plist */,
+			);
+			path = Assignment3_ThasanonTests;
+			sourceTree = "<group>";
+		};
+		AC32E1681D3D38D8002D4163 /* Assignment3_ThasanonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC32E1691D3D38D8002D4163 /* Assignment3_ThasanonUITests.swift */,
+				AC32E16B1D3D38D8002D4163 /* Info.plist */,
+			);
+			path = Assignment3_ThasanonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC32E1451D3D38D8002D4163 /* Assignment3_Thasanon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC32E16E1D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_Thasanon" */;
+			buildPhases = (
+				AC32E1421D3D38D8002D4163 /* Sources */,
+				AC32E1431D3D38D8002D4163 /* Frameworks */,
+				AC32E1441D3D38D8002D4163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Assignment3_Thasanon;
+			productName = Assignment3_Thasanon;
+			productReference = AC32E1461D3D38D8002D4163 /* Assignment3_Thasanon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC32E1591D3D38D8002D4163 /* Assignment3_ThasanonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC32E1711D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_ThasanonTests" */;
+			buildPhases = (
+				AC32E1561D3D38D8002D4163 /* Sources */,
+				AC32E1571D3D38D8002D4163 /* Frameworks */,
+				AC32E1581D3D38D8002D4163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC32E15C1D3D38D8002D4163 /* PBXTargetDependency */,
+			);
+			name = Assignment3_ThasanonTests;
+			productName = Assignment3_ThasanonTests;
+			productReference = AC32E15A1D3D38D8002D4163 /* Assignment3_ThasanonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC32E1641D3D38D8002D4163 /* Assignment3_ThasanonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC32E1741D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_ThasanonUITests" */;
+			buildPhases = (
+				AC32E1611D3D38D8002D4163 /* Sources */,
+				AC32E1621D3D38D8002D4163 /* Frameworks */,
+				AC32E1631D3D38D8002D4163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC32E1671D3D38D8002D4163 /* PBXTargetDependency */,
+			);
+			name = Assignment3_ThasanonUITests;
+			productName = Assignment3_ThasanonUITests;
+			productReference = AC32E1651D3D38D8002D4163 /* Assignment3_ThasanonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC32E13E1D3D38D8002D4163 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = maew;
+				TargetAttributes = {
+					AC32E1451D3D38D8002D4163 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					AC32E1591D3D38D8002D4163 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AC32E1451D3D38D8002D4163;
+					};
+					AC32E1641D3D38D8002D4163 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AC32E1451D3D38D8002D4163;
+					};
+				};
+			};
+			buildConfigurationList = AC32E1411D3D38D8002D4163 /* Build configuration list for PBXProject "Assignment3_Thasanon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC32E13D1D3D38D8002D4163;
+			productRefGroup = AC32E1471D3D38D8002D4163 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC32E1451D3D38D8002D4163 /* Assignment3_Thasanon */,
+				AC32E1591D3D38D8002D4163 /* Assignment3_ThasanonTests */,
+				AC32E1641D3D38D8002D4163 /* Assignment3_ThasanonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC32E1441D3D38D8002D4163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC32E1541D3D38D8002D4163 /* LaunchScreen.storyboard in Resources */,
+				AC32E1511D3D38D8002D4163 /* Assets.xcassets in Resources */,
+				AC32E14F1D3D38D8002D4163 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1581D3D38D8002D4163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1631D3D38D8002D4163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC32E1421D3D38D8002D4163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC32E14C1D3D38D8002D4163 /* ViewController.swift in Sources */,
+				AC32E17A1D3D3D0E002D4163 /* MainListTableTableViewController.swift in Sources */,
+				AC32E17C1D3D40BB002D4163 /* DetailViewController.swift in Sources */,
+				AC32E1781D3D3A94002D4163 /* Recipes.swift in Sources */,
+				AC32E14A1D3D38D8002D4163 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1561D3D38D8002D4163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC32E15F1D3D38D8002D4163 /* Assignment3_ThasanonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC32E1611D3D38D8002D4163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC32E16A1D3D38D8002D4163 /* Assignment3_ThasanonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC32E15C1D3D38D8002D4163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC32E1451D3D38D8002D4163 /* Assignment3_Thasanon */;
+			targetProxy = AC32E15B1D3D38D8002D4163 /* PBXContainerItemProxy */;
+		};
+		AC32E1671D3D38D8002D4163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC32E1451D3D38D8002D4163 /* Assignment3_Thasanon */;
+			targetProxy = AC32E1661D3D38D8002D4163 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC32E14D1D3D38D8002D4163 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC32E14E1D3D38D8002D4163 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC32E1521D3D38D8002D4163 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC32E1531D3D38D8002D4163 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC32E16C1D3D38D8002D4163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC32E16D1D3D38D8002D4163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC32E16F1D3D38D8002D4163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Assignment3_Thasanon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-Thasanon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC32E1701D3D38D8002D4163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Assignment3_Thasanon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-Thasanon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC32E1721D3D38D8002D4163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Assignment3_ThasanonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-ThasanonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment3_Thasanon.app/Assignment3_Thasanon";
+			};
+			name = Debug;
+		};
+		AC32E1731D3D38D8002D4163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Assignment3_ThasanonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-ThasanonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment3_Thasanon.app/Assignment3_Thasanon";
+			};
+			name = Release;
+		};
+		AC32E1751D3D38D8002D4163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Assignment3_ThasanonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-ThasanonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Assignment3_Thasanon;
+			};
+			name = Debug;
+		};
+		AC32E1761D3D38D8002D4163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Assignment3_ThasanonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maew.Assignment3-ThasanonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Assignment3_Thasanon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC32E1411D3D38D8002D4163 /* Build configuration list for PBXProject "Assignment3_Thasanon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC32E16C1D3D38D8002D4163 /* Debug */,
+				AC32E16D1D3D38D8002D4163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC32E16E1D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_Thasanon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC32E16F1D3D38D8002D4163 /* Debug */,
+				AC32E1701D3D38D8002D4163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC32E1711D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_ThasanonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC32E1721D3D38D8002D4163 /* Debug */,
+				AC32E1731D3D38D8002D4163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC32E1741D3D38D8002D4163 /* Build configuration list for PBXNativeTarget "Assignment3_ThasanonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC32E1751D3D38D8002D4163 /* Debug */,
+				AC32E1761D3D38D8002D4163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC32E13E1D3D38D8002D4163 /* Project object */;
+}
