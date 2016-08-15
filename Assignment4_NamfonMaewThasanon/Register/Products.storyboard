@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8ja-u9-QOz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Products-->
+        <scene sceneID="Mpg-ks-GF9">
+            <objects>
+                <viewController id="LGV-xf-mOD" customClass="AddProductViewController" customModule="Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMu-AI-J61"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBd-r1-LUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Z4-Hm-KZS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2bl-JH-Wiy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sx-Xv-Ic2" userLabel="Prod1 Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                        <state key="normal" image="Watch1"/>
+                                        <connections>
+                                            <action selector="selectButtonProduct1Action:" destination="LGV-xf-mOD" eventType="touchUpInside" id="esZ-wR-RWA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-Pr-cnE" userLabel="Prod2 Button">
+                                        <rect key="frame" x="300" y="0.0" width="300" height="180"/>
+                                        <state key="normal" title="Button" image="watch2"/>
+                                        <connections>
+                                            <action selector="addMoreProduct:" destination="LGV-xf-mOD" eventType="touchUpInside" id="dDh-Cg-M6y"/>
+                                            <action selector="selectButtonProduct2Action:" destination="LGV-xf-mOD" eventType="touchUpInside" id="LfQ-WX-qKl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="2SN-Gs-gCM"/>
+                                    <constraint firstAttribute="height" constant="180" id="HK3-th-2JH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2SN-Gs-gCM"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-GK-7Bk">
+                                <rect key="frame" x="20" y="244" width="560" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="344-ko-3XT" userLabel="Prod3 Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
+                                        <state key="normal" title="Button" image="watch3"/>
+                                        <connections>
+                                            <action selector="selectButtonProduct3Action:" destination="LGV-xf-mOD" eventType="touchUpInside" id="sPM-om-i5m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSB-vh-YnP" userLabel="Prod4 Button">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="180"/>
+                                        <state key="normal" title="Button" image="watch4"/>
+                                        <connections>
+                                            <action selector="selectButtonProduct4Action:" destination="LGV-xf-mOD" eventType="touchUpInside" id="xxp-xx-O33"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Kvi-fh-Yhk"/>
+                                    <constraint firstAttribute="height" constant="180" id="jNP-wZ-SoA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kvi-fh-Yhk"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1HY-nm-A9D">
+                                <rect key="frame" x="0.0" y="424" width="600" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dn-1Z-3j4" userLabel="Prod5 Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                        <state key="normal" title="Button" image="watch5"/>
+                                        <connections>
+                                            <action selector="selectButtonProduct5Action:" destination="LGV-xf-mOD" eventType="touchUpInside" id="1tm-Xg-X7O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Button6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-vI-YKN">
+                                        <rect key="frame" x="300" y="75" width="300" height="30"/>
+                                        <state key="normal" title="Add More Product"/>
+                                        <connections>
+                                            <action selector="addMoreProduct:" destination="LGV-xf-mOD" eventType="touchUpInside" id="SHn-A7-GnS"/>
+                                            <segue destination="FRY-hk-3TN" kind="show" id="rSH-Z6-bEz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="QLv-Ig-aed"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2bl-JH-Wiy" firstAttribute="top" secondItem="vMu-AI-J61" secondAttribute="bottom" id="4wf-B2-Zzn"/>
+                            <constraint firstItem="2bl-JH-Wiy" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leading" id="6In-rJ-vta"/>
+                            <constraint firstAttribute="trailing" secondItem="2bl-JH-Wiy" secondAttribute="trailing" id="AgM-Ud-IFw"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="top" secondItem="2bl-JH-Wiy" secondAttribute="bottom" id="CN8-Ru-VjG"/>
+                            <constraint firstAttribute="trailing" secondItem="2bl-JH-Wiy" secondAttribute="trailing" id="G0x-pL-YbX"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leading" id="Gf6-ll-DnG"/>
+                            <constraint firstAttribute="trailing" secondItem="1HY-nm-A9D" secondAttribute="trailing" id="HXl-r1-9ve"/>
+                            <constraint firstAttribute="trailing" secondItem="1HY-nm-A9D" secondAttribute="trailing" id="NMq-UR-rRP"/>
+                            <constraint firstItem="a1d-GK-7Bk" firstAttribute="top" secondItem="2bl-JH-Wiy" secondAttribute="bottom" id="UVz-Io-fg4"/>
+                            <constraint firstItem="a1d-GK-7Bk" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leading" id="V6p-Qo-6kC"/>
+                            <constraint firstAttribute="trailing" secondItem="a1d-GK-7Bk" secondAttribute="trailing" id="VTc-g0-TMW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1d-GK-7Bk" secondAttribute="trailing" id="WVx-xv-qr7"/>
+                            <constraint firstItem="a1d-GK-7Bk" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leadingMargin" id="WbC-Qf-yJy"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leading" id="auP-oe-zug"/>
+                            <constraint firstAttribute="bottom" secondItem="1HY-nm-A9D" secondAttribute="bottom" id="ePu-gX-U7I"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="top" secondItem="a1d-GK-7Bk" secondAttribute="bottom" id="l8z-Mf-CxA"/>
+                            <constraint firstItem="2bl-JH-Wiy" firstAttribute="top" secondItem="vMu-AI-J61" secondAttribute="bottom" id="mh0-nb-xbr"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="top" secondItem="2bl-JH-Wiy" secondAttribute="bottom" id="nbe-fA-oa7"/>
+                            <constraint firstItem="1HY-nm-A9D" firstAttribute="leading" secondItem="8Z4-Hm-KZS" secondAttribute="leading" id="nft-lO-w81"/>
+                            <constraint firstItem="a1d-GK-7Bk" firstAttribute="top" secondItem="2bl-JH-Wiy" secondAttribute="bottom" id="wt0-qU-6Fi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4wf-B2-Zzn"/>
+                                <exclude reference="G0x-pL-YbX"/>
+                                <exclude reference="V6p-Qo-6kC"/>
+                                <exclude reference="VTc-g0-TMW"/>
+                                <exclude reference="wt0-qU-6Fi"/>
+                                <exclude reference="CN8-Ru-VjG"/>
+                                <exclude reference="Gf6-ll-DnG"/>
+                                <exclude reference="NMq-UR-rRP"/>
+                                <exclude reference="auP-oe-zug"/>
+                                <exclude reference="ePu-gX-U7I"/>
+                                <exclude reference="nbe-fA-oa7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Products" id="NbG-Ph-qlZ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Fmc-I2-Zm6">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="LGV-xf-mOD" id="TgK-sl-M6b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="prod1Button" destination="5sx-Xv-Ic2" id="FJE-xw-pS0"/>
+                        <outlet property="prod2Button" destination="ITE-Pr-cnE" id="Rfv-It-VnJ"/>
+                        <outlet property="prod3Button" destination="344-ko-3XT" id="iYF-zN-5Fd"/>
+                        <outlet property="prod4Button" destination="KSB-vh-YnP" id="t0d-5l-hpj"/>
+                        <outlet property="prod5Button" destination="1dn-1Z-3j4" id="33g-0K-Nyz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7w-qW-IQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640" y="274"/>
+        </scene>
+        <!--Add new Item-->
+        <scene sceneID="um5-JD-IVo">
+            <objects>
+                <viewController id="FRY-hk-3TN" customClass="AddViewController" customModule="Register" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xzV-Zu-JxR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vlf-yU-ESQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jup-CB-bLS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="To1-Dd-psr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-fb-Xkv">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OHT-w3-zCu">
+                                        <rect key="frame" x="0.0" y="150" width="600" height="150"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="TUG-ly-W90"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="To1-Dd-psr" secondAttribute="trailing" id="Zw0-IK-Bl8"/>
+                            <constraint firstItem="To1-Dd-psr" firstAttribute="leading" secondItem="jup-CB-bLS" secondAttribute="leading" id="bv6-dp-qYF"/>
+                            <constraint firstItem="To1-Dd-psr" firstAttribute="top" secondItem="xzV-Zu-JxR" secondAttribute="bottom" id="sxZ-l1-Ryb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new Item" id="bO2-3D-8TE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ydc-ld-lPu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="c6k-l5-mDr">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                            <connections>
+                                <action selector="addButtonAction:" destination="FRY-hk-3TN" id="iGF-9e-Vxw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="priceTextField" destination="OHT-w3-zCu" id="5v9-aX-OeE"/>
+                        <outlet property="titleTextField" destination="y0d-fb-Xkv" id="fE1-SV-vaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAJ-5O-1nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313" y="274"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ldw-uF-fIW">
+            <objects>
+                <navigationController storyboardIdentifier="ProductNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8ja-u9-QOz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fu9-gs-rY4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LGV-xf-mOD" kind="relationship" relationship="rootViewController" id="dvm-yt-Uyb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJg-e0-Sn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Watch1" width="520" height="580"/>
+        <image name="watch2" width="520" height="580"/>
+        <image name="watch3" width="500" height="500"/>
+        <image name="watch4" width="551" height="879"/>
+        <image name="watch5" width="341" height="500"/>
+    </resources>
+</document>
