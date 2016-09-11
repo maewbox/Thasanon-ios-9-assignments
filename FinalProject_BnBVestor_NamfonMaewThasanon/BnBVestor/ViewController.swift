@@ -85,6 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func updateTableViewWithSelectedSegment() {
             tableView.reloadData()
+            dropPinZoomIn(selectedPin!)
     }
     
     
@@ -218,14 +219,14 @@ extension ViewController: HandleMapSearch {
 extension ViewController: HandleMapSearch {
         func dropPinZoomIn(placemark: MKPlacemark) {
             // cache the pin
-            //selectedPin = placemark
+            selectedPin = placemark
             // clear existing pins
             mapView.removeAnnotations(mapView.annotations)
             
             for mockItem in mockData {
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = CLLocationCoordinate2D(latitude: mockItem.latitude, longitude: mockItem.longtitude)
-                annotation.title = "$"+String(mockItem.occupancy_100)
+                annotation.title = "$"+String(mockItem.displayDollar)
                 annotation.subtitle = mockItem.address
                 
                 mapView.addAnnotation(annotation)
