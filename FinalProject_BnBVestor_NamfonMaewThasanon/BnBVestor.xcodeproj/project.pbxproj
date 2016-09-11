@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC94918C1D822120007CBB75 /* EstimateArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94918B1D822120007CBB75 /* EstimateArea.swift */; };
+		ACCF588B1D7A87CE00711E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF588A1D7A87CE00711E24 /* AppDelegate.swift */; };
+		ACCF588D1D7A87CE00711E24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF588C1D7A87CE00711E24 /* ViewController.swift */; };
+		ACCF58901D7A87CE00711E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF588E1D7A87CE00711E24 /* Main.storyboard */; };
+		ACCF58921D7A87CE00711E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCF58911D7A87CE00711E24 /* Assets.xcassets */; };
+		ACCF58951D7A87CE00711E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF58931D7A87CE00711E24 /* LaunchScreen.storyboard */; };
+		ACCF58A01D7A87CE00711E24 /* BnBVestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF589F1D7A87CE00711E24 /* BnBVestorTests.swift */; };
+		ACCF58AB1D7A87CE00711E24 /* BnBVestorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF58AA1D7A87CE00711E24 /* BnBVestorUITests.swift */; };
+		ACDBF8911D80D2170002200D /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDBF8901D80D2170002200D /* LocationSearchTable.swift */; };
+		ACF2D5461D84AA5600857670 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2D5451D84AA5600857670 /* MainTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACCF589C1D7A87CE00711E24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCF587F1D7A87CE00711E24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACCF58861D7A87CE00711E24;
+			remoteInfo = BnBVestor;
+		};
+		ACCF58A71D7A87CE00711E24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCF587F1D7A87CE00711E24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACCF58861D7A87CE00711E24;
+			remoteInfo = BnBVestor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC94918B1D822120007CBB75 /* EstimateArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateArea.swift; sourceTree = "<group>"; };
+		ACCF58871D7A87CE00711E24 /* BnBVestor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BnBVestor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCF588A1D7A87CE00711E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACCF588C1D7A87CE00711E24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACCF588F1D7A87CE00711E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACCF58911D7A87CE00711E24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACCF58941D7A87CE00711E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACCF58961D7A87CE00711E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCF589B1D7A87CE00711E24 /* BnBVestorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BnBVestorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCF589F1D7A87CE00711E24 /* BnBVestorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BnBVestorTests.swift; sourceTree = "<group>"; };
+		ACCF58A11D7A87CE00711E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCF58A61D7A87CE00711E24 /* BnBVestorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BnBVestorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCF58AA1D7A87CE00711E24 /* BnBVestorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BnBVestorUITests.swift; sourceTree = "<group>"; };
+		ACCF58AC1D7A87CE00711E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDBF8901D80D2170002200D /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		ACF2D5451D84AA5600857670 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACCF58841D7A87CE00711E24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58981D7A87CE00711E24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58A31D7A87CE00711E24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACCF587E1D7A87CE00711E24 = {
+			isa = PBXGroup;
+			children = (
+				ACCF58891D7A87CE00711E24 /* BnBVestor */,
+				ACCF589E1D7A87CE00711E24 /* BnBVestorTests */,
+				ACCF58A91D7A87CE00711E24 /* BnBVestorUITests */,
+				ACCF58881D7A87CE00711E24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACCF58881D7A87CE00711E24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF58871D7A87CE00711E24 /* BnBVestor.app */,
+				ACCF589B1D7A87CE00711E24 /* BnBVestorTests.xctest */,
+				ACCF58A61D7A87CE00711E24 /* BnBVestorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACCF58891D7A87CE00711E24 /* BnBVestor */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF588A1D7A87CE00711E24 /* AppDelegate.swift */,
+				ACCF588C1D7A87CE00711E24 /* ViewController.swift */,
+				ACF2D5451D84AA5600857670 /* MainTableViewCell.swift */,
+				ACDBF8901D80D2170002200D /* LocationSearchTable.swift */,
+				AC94918B1D822120007CBB75 /* EstimateArea.swift */,
+				ACCF58911D7A87CE00711E24 /* Assets.xcassets */,
+				ACCF588E1D7A87CE00711E24 /* Main.storyboard */,
+				ACCF58931D7A87CE00711E24 /* LaunchScreen.storyboard */,
+				ACCF58961D7A87CE00711E24 /* Info.plist */,
+			);
+			path = BnBVestor;
+			sourceTree = "<group>";
+		};
+		ACCF589E1D7A87CE00711E24 /* BnBVestorTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF589F1D7A87CE00711E24 /* BnBVestorTests.swift */,
+				ACCF58A11D7A87CE00711E24 /* Info.plist */,
+			);
+			path = BnBVestorTests;
+			sourceTree = "<group>";
+		};
+		ACCF58A91D7A87CE00711E24 /* BnBVestorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF58AA1D7A87CE00711E24 /* BnBVestorUITests.swift */,
+				ACCF58AC1D7A87CE00711E24 /* Info.plist */,
+			);
+			path = BnBVestorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACCF58861D7A87CE00711E24 /* BnBVestor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCF58AF1D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestor" */;
+			buildPhases = (
+				ACCF58831D7A87CE00711E24 /* Sources */,
+				ACCF58841D7A87CE00711E24 /* Frameworks */,
+				ACCF58851D7A87CE00711E24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BnBVestor;
+			productName = BnBVestor;
+			productReference = ACCF58871D7A87CE00711E24 /* BnBVestor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACCF589A1D7A87CE00711E24 /* BnBVestorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCF58B21D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestorTests" */;
+			buildPhases = (
+				ACCF58971D7A87CE00711E24 /* Sources */,
+				ACCF58981D7A87CE00711E24 /* Frameworks */,
+				ACCF58991D7A87CE00711E24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACCF589D1D7A87CE00711E24 /* PBXTargetDependency */,
+			);
+			name = BnBVestorTests;
+			productName = BnBVestorTests;
+			productReference = ACCF589B1D7A87CE00711E24 /* BnBVestorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACCF58A51D7A87CE00711E24 /* BnBVestorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCF58B51D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestorUITests" */;
+			buildPhases = (
+				ACCF58A21D7A87CE00711E24 /* Sources */,
+				ACCF58A31D7A87CE00711E24 /* Frameworks */,
+				ACCF58A41D7A87CE00711E24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACCF58A81D7A87CE00711E24 /* PBXTargetDependency */,
+			);
+			name = BnBVestorUITests;
+			productName = BnBVestorUITests;
+			productReference = ACCF58A61D7A87CE00711E24 /* BnBVestorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACCF587F1D7A87CE00711E24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = maewbox;
+				TargetAttributes = {
+					ACCF58861D7A87CE00711E24 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					ACCF589A1D7A87CE00711E24 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ACCF58861D7A87CE00711E24;
+					};
+					ACCF58A51D7A87CE00711E24 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ACCF58861D7A87CE00711E24;
+					};
+				};
+			};
+			buildConfigurationList = ACCF58821D7A87CE00711E24 /* Build configuration list for PBXProject "BnBVestor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACCF587E1D7A87CE00711E24;
+			productRefGroup = ACCF58881D7A87CE00711E24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACCF58861D7A87CE00711E24 /* BnBVestor */,
+				ACCF589A1D7A87CE00711E24 /* BnBVestorTests */,
+				ACCF58A51D7A87CE00711E24 /* BnBVestorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACCF58851D7A87CE00711E24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCF58951D7A87CE00711E24 /* LaunchScreen.storyboard in Resources */,
+				ACCF58921D7A87CE00711E24 /* Assets.xcassets in Resources */,
+				ACCF58901D7A87CE00711E24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58991D7A87CE00711E24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58A41D7A87CE00711E24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACCF58831D7A87CE00711E24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF2D5461D84AA5600857670 /* MainTableViewCell.swift in Sources */,
+				ACDBF8911D80D2170002200D /* LocationSearchTable.swift in Sources */,
+				AC94918C1D822120007CBB75 /* EstimateArea.swift in Sources */,
+				ACCF588D1D7A87CE00711E24 /* ViewController.swift in Sources */,
+				ACCF588B1D7A87CE00711E24 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58971D7A87CE00711E24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCF58A01D7A87CE00711E24 /* BnBVestorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF58A21D7A87CE00711E24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCF58AB1D7A87CE00711E24 /* BnBVestorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACCF589D1D7A87CE00711E24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACCF58861D7A87CE00711E24 /* BnBVestor */;
+			targetProxy = ACCF589C1D7A87CE00711E24 /* PBXContainerItemProxy */;
+		};
+		ACCF58A81D7A87CE00711E24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACCF58861D7A87CE00711E24 /* BnBVestor */;
+			targetProxy = ACCF58A71D7A87CE00711E24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACCF588E1D7A87CE00711E24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCF588F1D7A87CE00711E24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACCF58931D7A87CE00711E24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCF58941D7A87CE00711E24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACCF58AD1D7A87CE00711E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACCF58AE1D7A87CE00711E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACCF58B01D7A87CE00711E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BnBVestor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACCF58B11D7A87CE00711E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BnBVestor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACCF58B31D7A87CE00711E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BnBVestorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BnBVestor.app/BnBVestor";
+			};
+			name = Debug;
+		};
+		ACCF58B41D7A87CE00711E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BnBVestorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BnBVestor.app/BnBVestor";
+			};
+			name = Release;
+		};
+		ACCF58B61D7A87CE00711E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BnBVestorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BnBVestor;
+			};
+			name = Debug;
+		};
+		ACCF58B71D7A87CE00711E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BnBVestorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maewbox.BnBVestorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BnBVestor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACCF58821D7A87CE00711E24 /* Build configuration list for PBXProject "BnBVestor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCF58AD1D7A87CE00711E24 /* Debug */,
+				ACCF58AE1D7A87CE00711E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCF58AF1D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCF58B01D7A87CE00711E24 /* Debug */,
+				ACCF58B11D7A87CE00711E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCF58B21D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCF58B31D7A87CE00711E24 /* Debug */,
+				ACCF58B41D7A87CE00711E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCF58B51D7A87CE00711E24 /* Build configuration list for PBXNativeTarget "BnBVestorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCF58B61D7A87CE00711E24 /* Debug */,
+				ACCF58B71D7A87CE00711E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACCF587F1D7A87CE00711E24 /* Project object */;
+}

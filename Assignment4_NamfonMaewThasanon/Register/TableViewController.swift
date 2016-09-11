@@ -95,12 +95,13 @@ extension TableViewController: AddViewControlerDelegate {
 
 }
 
-/*extension TableViewController: AddCustomViewControllerDelegate {
+extension TableViewController: AddCustomViewControllerDelegate {
 
     func userDidAddNewProduct(product: Product){
         // append item to checkout array
         checkoutItems.append(product)
         // reload the table view
         tableView.reloadData()
-}*/
+    }
+}
 
