@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var resultSearchController : UISearchController? = nil
     
     var mockData = [EstimateArea]()
+    var estimateAreaList = [EstimateArea]()
     
 
     let mockAreas = [
@@ -85,18 +86,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func updateTableViewWithSelectedSegment() {
             tableView.reloadData()
-            dropPinZoomIn(selectedPin!)
+        if let selectedPin = selectedPin {
+            dropPinZoomIn(selectedPin)
+        }
+        
     }
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // MARK : Fetch API
+  //      EstimateArea.getEstimateInfo(city: "Portsmouth", state: N)
+
+        EstimateArea.getEstimateInfo("New York", state: "NY") { (estimateAreaList) in
+            guard let estimateAreaList = estimateAreaList else {
+                return
+            }
+            self.estimateAreaList = estimateAreaList
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+        }
+        
+
         // MARK : Mock Data
         let sortedMock = mockAreas.sort() { $0.displayDollar > $1.displayDollar }
         mockData.appendContentsOf(sortedMock)
 
-
+        
         
         // Allow Location
         locationManager.delegate = self
@@ -144,12 +163,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK : TABLE VIEW
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockData.count
+        //return mockData.count
+        print(estimateAreaList.count)
+        return estimateAreaList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("maincell", forIndexPath: indexPath) as! MainTableViewCell
-        let zipEstimate = mockData[indexPath.row]
+        //let zipEstimate = mockData[indexPath.row]
+        let zipEstimate = estimateAreaList[indexPath.row]
         
         cell.dollarAmount.text = String(zipEstimate.displayDollar)
         cell.addressLabel.text = zipEstimate.address

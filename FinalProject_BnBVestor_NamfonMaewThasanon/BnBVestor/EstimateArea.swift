@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class EstimateArea {
 
@@ -44,55 +45,215 @@ class EstimateArea {
         self.monthly_mortgage_cost = monthly_mortgage_cost
         self.hotel_average = hotel_average
         self.gross_income_50 = gross_income_50
+    }
+/* ----------------------- NSURL
+    static func estimateArea(city: String, state: String, completion: ([EstimateArea]?) -> Void) {
+        let url = NSURL(string: "https://ruv-airvestor-v1.p.mashape.com/estimators/?city=\(city)&state=\(state)")!
+        let urlRequest = NSMutableURLRequest(
+            URL: url,
+            cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
+            timeoutInterval: 10.0 * 1000)
+        urlRequest.HTTPMethod = "GET"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.addValue("wyWOQp9QGvmshrSDKIc7m62V0sVOp1s3C53jsnwZcrQm7wYRva", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("ccADw6HROamshe1b0mSo6qks4fJxp1lbdkljsnJJXWs9gtHPSb", forHTTPHeaderField: "X-Mashape-Key")
 
+        let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data, response, error) in
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            
+            let parser = EstimateAreaParser(data: data)
+            let estimateAreaList = parser.parse()
+            completion(estimateAreaList)
+        }
+        dataTask.resume()
     }
     
+} // end  main class
 
-}
 
-/* JSON RESPONSE EXAMPLE
+class EstimateAreaParser {
+    let data: NSData
+    
+    init(data: NSData) {
+        self.data = data
+    }
+    
+    func parse() -> [EstimateArea] {
+        var estimateAreaList = [EstimateArea]()
+        
+        do {
+            if let estimateAreaObject = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] {
+                    if
+                        let zip = estimateAreaObject["zip"] as? String,
+                        let city = estimateAreaObject["city"] as? String,
+                        let state = estimateAreaObject["state"] as? String,
+                        let address = estimateAreaObject["address"] as? String,
+                        let latitude = estimateAreaObject["latitude"] as? Double,
+                        let longtitude = estimateAreaObject["longitude"] as? Double,
+                        let airbnb_avg_price_all = estimateAreaObject["airbnb_avg_price_all"] as? Double,
+                        let occupancy_100 = estimateAreaObject["occupancy_100"]  as? Double,
+                        let occupancy_50 = estimateAreaObject["occupancy_50"] as? Double,
+                        let occupancy_25 = estimateAreaObject["occupancy_25"] as? Double,
+                        let airbnb_result_count = estimateAreaObject["airbnb_result_count"] as? Int,
+                        let monthly_mortgage_cost = estimateAreaObject["monthly_mortgage_cost"] as? Double,
+                        let hotel_average = estimateAreaObject["hotel_average"]  as? Double,
+                        let gross_income_50 = estimateAreaObject["gross_income_50"] as? Double,
+                        let displayDollar = occupancy_100 - monthly_mortgage_cost as? Double
+                    {
+
+                        let estimateArea = EstimateArea(displayDollar: displayDollar, zip: zip, city: city, state: state, address: address, latitude: latitude, longtitude: longtitude, airbnb_avg_price_all: airbnb_avg_price_all, occupancy_100: occupancy_100, occupancy_50: occupancy_50, occupancy_25: occupancy_25, airbnb_result_count: airbnb_result_count, monthly_mortgage_cost: monthly_mortgage_cost, hotel_average: hotel_average, gross_income_50: gross_income_50)
+                        
+                        estimateAreaList.append(estimateArea)
+                }
+            }
+        }catch {
+            print("EXCEPTION: no response from service")
+        }
+        
+        return estimateAreaList
+    }
+} //end estimate parser
+*/
+    
+// ---------------- ALAMOFIRE
+
+    static func getEstimateInfo (city: String, state: String, completion: ([EstimateArea]?) -> Void) {
+        
+        var estimateAreaList = [EstimateArea]()
+        let url = "https://ruv-airvestor-v1.p.mashape.com/estimators"
+        
+        Alamofire.request (
+            .GET,
+            url,
+            parameters: ["city": city, "state": state],
+            headers: ["Authorization" : "wyWOQp9QGvmshrSDKIc7m62V0sVOp1s3C53jsnwZcrQm7wYRva", "X-Mashape-Key" : "ccADw6HROamshe1b0mSo6qks4fJxp1lbdkljsnJJXWs9gtHPSb", "Accept" : "application/json"]
+        )
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+        
+        .responseJSON { response in
+            guard response.result.isSuccess else {
+                print("Error while fetching data : \(response.result.error)")
+                return
+            }
+            
+            guard let responseValue = response.result.value //as? [String: AnyObject],
+                //results = responseValue["results"] as? [AnyObject]
+                else {
+                print("Invalid information received from service")
+                print(response.debugDescription)
+                completion(nil)
+                return
+            }
+            print (responseValue)
+            
+//            for estimateAreaObject in results {
+//                if
+//                    let zip = estimateAreaObject["zip"] as? String,
+//                    let city = estimateAreaObject["city"] as? String,
+//                    let state = estimateAreaObject["state"] as? String,
+//                    let address = estimateAreaObject["address"] as? String,
+//                    let latitude = estimateAreaObject["latitude"] as? Double,
+//                    let longtitude = estimateAreaObject["longitude"] as? Double,
+//                    let airbnb_avg_price_all = estimateAreaObject["airbnb_avg_price_all"] as? Double,
+//                    let occupancy_100 = estimateAreaObject["occupancy_100"]  as? Double,
+//                    let occupancy_50 = estimateAreaObject["occupancy_50"] as? Double,
+//                    let occupancy_25 = estimateAreaObject["occupancy_25"] as? Double,
+//                    let airbnb_result_count = estimateAreaObject["airbnb_result_count"] as? Int,
+//                    let monthly_mortgage_cost = estimateAreaObject["monthly_mortgage_cost"] as? Double,
+//                    let hotel_average = estimateAreaObject["hotel_average"]  as? Double,
+//                    let gross_income_50 = estimateAreaObject["gross_income_50"] as? Double,
+//                    let displayDollar = occupancy_100 - monthly_mortgage_cost as? Double
+//                {
+//                    
+//                    let estimateArea = EstimateArea(displayDollar: displayDollar, zip: zip, city: city, state: state, address: address, latitude: latitude, longtitude: longtitude, airbnb_avg_price_all: airbnb_avg_price_all, occupancy_100: occupancy_100, occupancy_50: occupancy_50, occupancy_25: occupancy_25, airbnb_result_count: airbnb_result_count, monthly_mortgage_cost: monthly_mortgage_cost, hotel_average: hotel_average, gross_income_50: gross_income_50)
+//                    
+//                    estimateAreaList.append(estimateArea)
+//                }
+//
+//            }
+            
+            if let object = responseValue as? [[String : AnyObject]] {
+                for estimateAreaObject in object{
+                if
+                    let zip = estimateAreaObject["zip"] as? String,
+                    let city = estimateAreaObject["city"] as? String,
+                    let state = estimateAreaObject["state"] as? String,
+                    let address = estimateAreaObject["address"] as? String,
+                    let latitude = estimateAreaObject["latitude"] as? Double,
+                    let longtitude = estimateAreaObject["longitude"] as? Double,
+                    let airbnb_avg_price_all = estimateAreaObject["airbnb_avg_price_all"] as? Double,
+                    let occupancy_100 = estimateAreaObject["occupancy_100"]  as? Double,
+                    let occupancy_50 = estimateAreaObject["occupancy_50"] as? Double,
+                    let occupancy_25 = estimateAreaObject["occupancy_25"] as? Double,
+                    let airbnb_result_count = estimateAreaObject["airbnb_result_count"] as? Int,
+                    let monthly_mortgage_cost = estimateAreaObject["monthly_mortgage_cost"] as? Double,
+                    let hotel_average = estimateAreaObject["hotel_average"]  as? Double,
+                    let gross_income_50 = estimateAreaObject["gross_income_50"] as? Double,
+                    let displayDollar = occupancy_100 - monthly_mortgage_cost as? Double
+                {
+                    
+                    let estimateArea = EstimateArea(displayDollar: displayDollar, zip: zip, city: city, state: state, address: address, latitude: latitude, longtitude: longtitude, airbnb_avg_price_all: airbnb_avg_price_all, occupancy_100: occupancy_100, occupancy_50: occupancy_50, occupancy_25: occupancy_25, airbnb_result_count: airbnb_result_count, monthly_mortgage_cost: monthly_mortgage_cost, hotel_average: hotel_average, gross_income_50: gross_income_50)
+                    
+                    estimateAreaList.append(estimateArea)
+                }
+              }// end for
+            }
+        
+            //print(responseJSON)
+
+            completion(estimateAreaList)
+            
+        } // end resonse json in
  
- [
- {
- "zip": "10005",
- "city": "New York",
- "state": "NY",
- "country": "US",
- "address": "New York NY 10005 US ",
- "latitude": "40.6998433",
- "longitude": "-74.0072436",
- "airbnb_avg_price_all": "191",
- "airbnb_avg_price_entire": null,
- "airbnb_avg_price_private": null,
- "airbnb_avg_price_shared": null,
- "occupancy_100": "5809.58",
- "cccupancy_75": null,
- "occupancy_50": "2904.79",
- "occupancy_25": "1452.40",
- "airbnb_result_count": "250",
- "search_radius": "887.3428946",
- "value_ratio": "0.004639871682",
- "avergage_property_price": "1252100",
- "monthly_mortgage_cost": "5224.969942",
- "gross_income_50": "-2320.18",
- "appreciation_month": "0.005783597076",
- "appreciation_quarter": "0.01557303918",
- "appreciation_year": "0.06380628717",
- "appreciation_5": "0.05347040718",
- "appreciation_10": "0.04296908785",
- "pct_fall_from_peak": "0",
- "peak_price": "1252100",
- "peak_quarter": "2015-Q3",
- "hotel_average": "365.73",
- "hotel_property_count": "545",
- "airbnb_hotel_diff": "-174.73"
- }
- ]
- 
- 
- */
+    }// end func
+}// end class
+/*
+class EstimateAreaParser {
+    let responseJson: [String: AnyObject]
+    
+    init(responseJson : [String : AnyObject]) {
+        self.responseJson  = responseJson
+    }
+    
+    func parse() -> [EstimateArea] {
+        var estimateAreaList = [EstimateArea]()
+        
+        do {
+            //if let estimateAreaObjects = responseJson as? [String : AnyObject] {
+                for estimateAreaObject in responseJson {
+                if
+                    let zip = estimateAreaObject["zip"] as? String,
+                    let city = estimateAreaObject["city"] as? String,
+                    let state = estimateAreaObject["state"] as? String,
+                    let address = estimateAreaObject["address"] as? String,
+                    let latitude = estimateAreaObject["latitude"] as? Double,
+                    let longtitude = estimateAreaObject["longitude"] as? Double,
+                    let airbnb_avg_price_all = estimateAreaObject["airbnb_avg_price_all"] as? Double,
+                    let occupancy_100 = estimateAreaObject["occupancy_100"]  as? Double,
+                    let occupancy_50 = estimateAreaObject["occupancy_50"] as? Double,
+                    let occupancy_25 = estimateAreaObject["occupancy_25"] as? Double,
+                    let airbnb_result_count = estimateAreaObject["airbnb_result_count"] as? Int,
+                    let monthly_mortgage_cost = estimateAreaObject["monthly_mortgage_cost"] as? Double,
+                    let hotel_average = estimateAreaObject["hotel_average"]  as? Double,
+                    let gross_income_50 = estimateAreaObject["gross_income_50"] as? Double,
+                    let displayDollar = occupancy_100 - monthly_mortgage_cost as? Double
+                {
+                    
+                    let estimateArea = EstimateArea(displayDollar: displayDollar, zip: zip, city: city, state: state, address: address, latitude: latitude, longtitude: longtitude, airbnb_avg_price_all: airbnb_avg_price_all, occupancy_100: occupancy_100, occupancy_50: occupancy_50, occupancy_25: occupancy_25, airbnb_result_count: airbnb_result_count, monthly_mortgage_cost: monthly_mortgage_cost, hotel_average: hotel_average, gross_income_50: gross_income_50)
+                    
+                    estimateAreaList.append(estimateArea)
+                }
+            }
+        }catch {
+            print("EXCEPTION: no response from service")
+        }
+        
+        return estimateAreaList
+    }
+} //end estimate parser
 
-
-
-
-
+*/
