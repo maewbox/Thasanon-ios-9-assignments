@@ -35,50 +35,53 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var resultSearchController : UISearchController? = nil
     
-    var mockData = [EstimateArea]()
+    //var mockData = [EstimateArea]()
     var estimateAreaList = [EstimateArea]()
     
 
-    let mockAreas = [
-        EstimateArea(displayDollar: 0, zip: "10005", city: "New York", state: "NY", address: "New York NY 10005 US", latitude: 40.6998433, longtitude: -74.0072436, airbnb_avg_price_all:191, occupancy_100: 5809.58, occupancy_50: 2904.79, occupancy_25: 1452.40, airbnb_result_count: 250, monthly_mortgage_cost: 5224.969942, hotel_average: 365.73, gross_income_50: -2320.18),
-        EstimateArea(displayDollar: 0, zip: "10307", city: "New York", state: "NY", address: "New York NY 10307 US", latitude: 40.5070853, longtitude: -74.2443436, airbnb_avg_price_all:80, occupancy_100: 2433.33, occupancy_50: 1216.19, occupancy_25: 625.23, airbnb_result_count: 78, monthly_mortgage_cost: 3456.86456, hotel_average: 265.73, gross_income_50: -3020.18),
-        EstimateArea(displayDollar: 0, zip: "11210", city: "New York", state: "NY", address: "New York NY 11210 US", latitude: 40.7127837, longtitude: -74.0059413, airbnb_avg_price_all:183, occupancy_100: 4197.5,occupancy_50: 2004.79, occupancy_25: 1002.40, airbnb_result_count: 37468, monthly_mortgage_cost: 6543.86456, hotel_average: 465.73, gross_income_50: -1320.18)
-        ]
+
+//    let mockAreas = [
+//        EstimateArea(displayDollar: 0, zip: "10005", city: "New York", state: "NY", address: "New York NY 10005 US", latitude: 40.6998433, longtitude: -74.0072436, airbnb_avg_price_all:191, occupancy_100: 5809.58, occupancy_50: 2904.79, occupancy_25: 1452.40, airbnb_result_count: 250, monthly_mortgage_cost: 5224.969942, hotel_average: 365.73, gross_income_50: -2320.18),
+//        EstimateArea(displayDollar: 0, zip: "10307", city: "New York", state: "NY", address: "New York NY 10307 US", latitude: 40.5070853, longtitude: -74.2443436, airbnb_avg_price_all:80, occupancy_100: 2433.33, occupancy_50: 1216.19, occupancy_25: 625.23, airbnb_result_count: 78, monthly_mortgage_cost: 3456.86456, hotel_average: 265.73, gross_income_50: -3020.18),
+//        EstimateArea(displayDollar: 0, zip: "11210", city: "New York", state: "NY", address: "New York NY 11210 US", latitude: 40.7127837, longtitude: -74.0059413, airbnb_avg_price_all:183, occupancy_100: 4197.5,occupancy_50: 2004.79, occupancy_25: 1002.40, airbnb_result_count: 37468, monthly_mortgage_cost: 6543.86456, hotel_average: 465.73, gross_income_50: -1320.18)
+//        ]
     
     // Dollar Amount on screen
     
     @IBAction func segmentAction(sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex{
         case 0 :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = mockArea.occupancy_100 - mockArea.monthly_mortgage_cost
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = estimateArea.occupancy_100 - estimateArea.monthly_mortgage_cost
                 updateTableViewWithSelectedSegment()
             }
 
         case 1 :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = mockArea.occupancy_100
-                updateTableViewWithSelectedSegment()
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = estimateArea.occupancy_100
+                //updateTableViewWithSelectedSegment()
+                tableView.reloadData()
+                dropPinZoomIn(selectedPin!)
             }
             
         case 2 :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = mockArea.occupancy_50
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = estimateArea.occupancy_50
                 updateTableViewWithSelectedSegment()
             }
         case 3 :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = mockArea.occupancy_25
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = estimateArea.occupancy_25
                 updateTableViewWithSelectedSegment()
             }
         case 4 :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = mockArea.monthly_mortgage_cost
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = estimateArea.monthly_mortgage_cost
                 updateTableViewWithSelectedSegment()
             }
         default :
-            for mockArea in mockAreas {
-                mockArea.displayDollar = -(mockArea.gross_income_50*2)
+            for estimateArea in estimateAreaList {
+                estimateArea.displayDollar = -(estimateArea.gross_income_50*2)
                 updateTableViewWithSelectedSegment()
             }
         }
@@ -98,22 +101,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         // MARK : Fetch API
-  //      EstimateArea.getEstimateInfo(city: "Portsmouth", state: N)
-
-        EstimateArea.getEstimateInfo("New York", state: "NY") { (estimateAreaList) in
-            guard let estimateAreaList = estimateAreaList else {
-                return
-            }
-            self.estimateAreaList = estimateAreaList
-            dispatch_async(dispatch_get_main_queue()) {
+        
+        if selectedPin == nil { // Default value
+            
+            EstimateArea.getEstimateInfo("New York", state: "NY") { (estimateAreaList) in
+                guard let estimateAreaList = estimateAreaList else {
+                    return
+                }
+                self.estimateAreaList = estimateAreaList
+                dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
+
+                }
             }
         }
-        
 
         // MARK : Mock Data
-        let sortedMock = mockAreas.sort() { $0.displayDollar > $1.displayDollar }
-        mockData.appendContentsOf(sortedMock)
+        let sortedEstimateArea = estimateAreaList.sort() { $0.displayDollar > $1.displayDollar }
+        estimateAreaList.appendContentsOf(sortedEstimateArea)
 
         
         
@@ -207,6 +212,7 @@ extension ViewController: CLLocationManagerDelegate {
             let span = MKCoordinateSpanMake(0.05, 0.05)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
+            
         }
     }
     
@@ -242,21 +248,60 @@ extension ViewController: HandleMapSearch {
         func dropPinZoomIn(placemark: MKPlacemark) {
             // cache the pin
             selectedPin = placemark
+        
             // clear existing pins
             mapView.removeAnnotations(mapView.annotations)
             
-            for mockItem in mockData {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = CLLocationCoordinate2D(latitude: mockItem.latitude, longitude: mockItem.longtitude)
-                annotation.title = "$"+String(mockItem.displayDollar)
-                annotation.subtitle = mockItem.address
+            // Generate new estimateAreaList
+            // Fetch from search location
+                guard let city = selectedPin?.locality else {
+                    return
+                }
                 
-                mapView.addAnnotation(annotation)
-                let span = MKCoordinateSpanMake(0.05, 0.05)
-                let region = MKCoordinateRegionMake(placemark.coordinate, span)
-                mapView.setRegion(region, animated: true)
+                guard let state = selectedPin?.administrativeArea else {
+                    return
+                }
                 
-            }
+                EstimateArea.getEstimateInfo(city, state: state) { (estimateAreaList) in
+                    guard let estimateAreaList = estimateAreaList else {
+                        return
+                    }
+                    self.estimateAreaList = estimateAreaList
+                    dispatch_async(dispatch_get_main_queue()) {
+                        //self.tableView.reloadData()
+                    }
+                }
+            
+            
+// ------------ MOCK DATA
+//            for mockItem in mockData {
+//                let annotation = MKPointAnnotation()
+//                annotation.coordinate = CLLocationCoordinate2D(latitude: mockItem.latitude, longitude: mockItem.longtitude)
+//                annotation.title = "$"+String(mockItem.displayDollar)
+//                annotation.subtitle = mockItem.address
+//                
+//                mapView.addAnnotation(annotation)
+//                let span = MKCoordinateSpanMake(0.05, 0.05)
+//                let region = MKCoordinateRegionMake(placemark.coordinate, span)
+//                mapView.setRegion(region, animated: true)
+//                
+//            }
+
+
+            for estimatePin in estimateAreaList {
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: estimatePin.latitude, longitude: estimatePin.longtitude)
+                    annotation.title = "$"+String(estimatePin.displayDollar)
+                    annotation.subtitle = estimatePin.address
+            
+                    mapView.addAnnotation(annotation)
+                    let span = MKCoordinateSpanMake(0.05, 0.05)
+                    let region = MKCoordinateRegionMake(placemark.coordinate, span)
+                    mapView.setRegion(region, animated: true)
+                            
+                        }
+            
+            
             
         }
 }
